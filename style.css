@@ -126,13 +126,14 @@ p {
 }
 
 footer {
-  height: 5rem;
+  height: auto;
   width: 100%;
+  padding: 4rem;
   background: radial-gradient(circle, rgba(243, 156, 18, 1) 0%, rgba(252, 70, 107, 1) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  place-content: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
 }
@@ -141,17 +142,56 @@ footer {
   padding: 0.5rem;
 }
 
-footer .brands {
+footer .contacto {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: column;
+  place-content: center;
+  padding: 5px;
   gap: 0.5rem ;
 }
 
-footer .brands a {
+footer .contacto ul li {
+  list-style-type: none;
+}
+
+footer .contacto a {
   color: white;
 }
 
-footer .brands a:hover {
+footer .contacto a:hover {
   color: black;
+}
+
+footer .formulario-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: large;
+}
+
+footer .formulario-footer input{
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 4px;
+}
+
+
+footer .formulario-footer button {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+  background-color: transparent;
+  padding: 3px;
+  border: 0;
+}
+
+footer .formulario-footer button:hover {
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
 }
